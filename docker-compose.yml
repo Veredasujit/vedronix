@@ -11,8 +11,7 @@ services:
         networks:
             - backend
         restart: always
-        env_file:
-            - .env
+        
         environment:
             - TZ=Asia/Kolkata
         
