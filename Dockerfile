@@ -25,5 +25,6 @@ RUN apk add --no-cache tzdata curl && \
 EXPOSE 5179
 
 # Run the app
-CMD ["npx", "serve", "-s", "dist", "-l", "tcp://0.0.0.0:5179"]
+CMD ["npx", "serve", "-s", "build", "-l", "tcp://0.0.0.0:5179"]
+
 
