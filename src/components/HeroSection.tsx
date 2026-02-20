@@ -2,9 +2,40 @@ import { Button } from "./ui/button";
 import { Check, Phone, ArrowRight, Star } from "lucide-react";
 import { DashboardMockup } from "./DashboardMockup";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 
 export function HeroSection() {
   return (
+    <>
+    <Helmet>
+        {/* Primary SEO */}
+        <title>Vedronix AI Calls – Automate Sales & Support</title>
+        <meta
+          name="description"
+          content="Vedronix automates high-stakes conversations with AI voice agents. Qualify leads, book meetings, and sync CRMs automatically."
+        />
+        <meta
+          name="keywords"
+          content="AI calling, voice AI, sales automation, AI phone calls, CRM automation"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Vedronix AI Calls" />
+        <meta
+          property="og:description"
+          content="AI voice agents that qualify leads, book appointments, and deliver results."
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Vedronix AI Calls" />
+        <meta
+          name="twitter:description"
+          content="AI Calls That Don’t Just Talk — They Deliver."
+        />
+      </Helmet>
+   
     <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-3xl -z-10" />
@@ -108,5 +139,6 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+     </>
   );
 }
