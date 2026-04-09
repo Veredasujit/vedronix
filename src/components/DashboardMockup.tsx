@@ -94,7 +94,7 @@ export function DashboardMockup() {
       
       {/* Floating Action Indicator */}
       <motion.div
-        className="absolute -right-4 -bottom-4 bg-[#00B4D8] text-white px-4 py-2 rounded-lg shadow-lg"
+        className="absolute right-2 bottom-2 bg-[#00B4D8]/90 backdrop-blur-md px-4 py-2 rounded-lg shadow-lg z-20"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >

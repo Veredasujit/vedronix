@@ -50,7 +50,7 @@ export function HowItWorksSection() {
             return (
               <div key={index} className="relative">
                 <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border-2 border-gray-200 hover:border-[#00B4D8] transition-all h-full">
-                  <div className="text-6xl font-bold text-[#00B4D8]/10 mb-4">
+                  <div className="text-6xl font-bold text-gray-500 mb-4">
                     {step.number}
                   </div>
                   <div className="w-14 h-14 bg-[#0A2463] rounded-lg flex items-center justify-center mb-4">

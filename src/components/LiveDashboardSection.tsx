@@ -49,7 +49,7 @@ export function LiveDashboardSection() {
               </div>
               
               <div className="flex items-center justify-between mb-8 relative z-10">
-                <h3 className="text-xl font-bold flex items-center gap-2">
+                <h3 className="text-xl text-white font-bold flex items-center gap-2">
                   <PhoneIncoming className="w-5 h-5 text-[#00B4D8]" /> 
                   Live Activity Stream
                 </h3>
@@ -95,7 +95,7 @@ export function LiveDashboardSection() {
                       <div className="flex items-center gap-3 justify-end">
                         <div className="text-right">
                           <div className="text-xs text-gray-500 uppercase font-bold tracking-tighter">Score</div>
-                          <div className="text-sm font-bold">{call.score}%</div>
+                          <div className="text-sm text-white font-bold">{call.score}%</div>
                         </div>
                         {call.status === "Completed" && (
                           <button className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
@@ -117,7 +117,7 @@ export function LiveDashboardSection() {
               ].map((stat, i) => (
                 <Card key={i} className="bg-white/5 border-white/5 p-6">
                   <div className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-2">{stat.label}</div>
-                  <div className="text-2xl font-bold flex items-baseline gap-2">
+                  <div className="text-2xl text-white font-bold flex items-baseline gap-2">
                     {stat.value}
                     <span className={`text-xs ${stat.trend.startsWith('+') ? 'text-teal-400' : 'text-red-400'}`}>
                       {stat.trend}
@@ -135,7 +135,7 @@ export function LiveDashboardSection() {
                 <div className="p-2 bg-teal-500/20 rounded-lg">
                   <MessageSquare className="w-5 h-5 text-teal-400" />
                 </div>
-                <h3 className="text-lg font-bold">Live Intelligence</h3>
+                <h3 className="text-lg font-bold text-white">Live Intelligence</h3>
               </div>
               
               <div className="space-y-6 text-sm">
@@ -182,7 +182,7 @@ export function LiveDashboardSection() {
             </Card>
 
             <Card className="bg-[#0f172a]/40 border-white/5 p-6">
-              <h3 className="font-bold mb-4 flex items-center gap-2">
+              <h3 className="font-bold text-white mb-4 flex items-center gap-2">
                 <Activity className="w-4 h-4 text-teal-500" /> Agent Health
               </h3>
               <div className="space-y-4">

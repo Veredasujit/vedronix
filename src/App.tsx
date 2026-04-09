@@ -1,36 +1,25 @@
-import { Header } from "./components/Header";
-import { HeroSection } from "./components/HeroSection";
-import { StatsSection } from "./components/StatsSection";
-import { CoreValueSection } from "./components/CoreValueSection";
-import { HowItWorksSection } from "./components/HowItWorksSection";
-import { UseCasesSection } from "./components/UseCasesSection";
-import { WorkflowBuilderSection } from "./components/WorkflowBuilderSection";
-import { LiveDashboardSection } from "./components/LiveDashboardSection";
-import { IntegrationsSection } from "./components/IntegrationsSection";
-import { ROISection } from "./components/ROISection";
-import { FAQSection } from "./components/FAQSection";
-import { FinalCTASection } from "./components/FinalCTASection";
-import { Footer } from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFoundPage";
+import DemoPage from "./pages/DemoPage";
+import AiAgentCall from "./pages/AiAgentCall";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white selection:bg-[#00B4D8] selection:text-white">
-      <Header />
-      <main>
-        <HeroSection />
-        <StatsSection />
-        <CoreValueSection />
-        <HowItWorksSection />
-        <WorkflowBuilderSection />
-        <UseCasesSection />
-        <LiveDashboardSection />
-        <IntegrationsSection />
-        <ROISection />
-        <FAQSection />
-        <FinalCTASection />
-      </main>
-      <Footer />
-    </div>
+   <>
+   <BrowserRouter>
+      <Routes>
+        {/* Main Routes */}
+        <Route path="/" element={<Home/>} />
+        <Route path="/ai-agent-demo" element={<DemoPage />} />
+        <Route path="/ai-agent-call" element={<AiAgentCall />} />
+
+
+        {/* 404 Page */}
+        <Route path="*" element={<NotFound/>} />
+      </Routes>
+    </BrowserRouter>
+   </>
   );
 }
 
