@@ -17,8 +17,8 @@ export default function AiAgentCall() {
   const localStreamRef = useRef<MediaStream | null>(null);
   const dataChannelRef = useRef<RTCDataChannel | null>(null);
   
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:7860";
-  const WS_URL = BACKEND_URL.replace("http", "ws");
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || " https://api.vedronix.com";
+  const WS_URL = BACKEND_URL.replace("https", "ws");
 
   // Language toggle
   const toggleLanguage = () => {
